@@ -1,0 +1,14 @@
+name: docker-pipeline
+on: [workflow_dispatch]
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Build Docker image
+      run: docker build -t django-ci-cd .
+
+    - name: Run tests inside container
+      run: docker run django-ci-cd
