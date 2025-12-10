@@ -7,9 +7,9 @@ jobs:
     steps:
     - uses: actions/checkout@v3
 
-    - name: Build CI image
-      run: docker build -t django-ci-cd -f Dockerfile.ci .
+    - name: Build Docker image
+      run: docker build -t django-ci-cd .
 
-    - name: Run tests
-      run: docker run --rm django-ci-cd
+    - name: Run tests inside container
+      run: docker run --rm django-ci-cd pytest
 
