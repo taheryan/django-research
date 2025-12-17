@@ -1,5 +1,5 @@
 import pytest
-from todolist.forms import TaskForm
+from members.forms import TaskForm
 
 def test_task_form_valid():
     form = TaskForm(data={'title': 'Do homework'})

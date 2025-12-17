@@ -1,6 +1,6 @@
 import pytest
 from rest_framework.test import APIClient
-from todolist.models import Task
+from members.models import Task
 
 @pytest.mark.django_db
 def test_api_create_missing_title_returns_400():

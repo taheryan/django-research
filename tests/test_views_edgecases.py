@@ -1,6 +1,6 @@
 import pytest
 from django.urls import reverse
-from todolist.models import Task
+from members.models import Task
 
 @pytest.mark.django_db
 def test_post_empty_title_shows_form_error_and_no_task_created(client):
