@@ -1,3 +1,6 @@
+import pytest
+
+@pytest.mark.django_db
 def test_list_page_contains_csrf_token_and_form_fields(client):
     res = client.get('/')
     assert res.status_code == 200
